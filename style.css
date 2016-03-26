@@ -1,0 +1,48 @@
+.header-mast {
+	background-color: rgb(103, 58, 183);
+    color: rgb(255, 255, 255);
+    height: 278px;
+}
+
+.main-wraper {
+	background-color: #ede7f6;
+	min-height: 1000px;
+}
+
+.main {
+	background-color: #fff;
+    margin-top: -100px;
+    border-top: 8px solid rgb(179, 136, 255);
+	margin-bottom: 48px;
+	box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
+}
+
+.main-content {
+	color: rgba(0,0,0,.87);
+    padding: 34px 30px;
+    word-wrap: break-word;
+}
+
+.badge-primary {
+    background-color: #337ab7;
+}
+
+.badge-success {
+	background-color: #5cb85c;
+}
+
+.badge-info {
+	background-color: #5bc0de;
+}
+
+.badge-warning {
+	background-color: #f0ad4e;
+}
+
+.badge-danger {
+	background-color: #d9534f;
+}
+
+.entry-number {
+	margin-left: -25px;
+}
