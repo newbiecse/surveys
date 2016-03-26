@@ -4,6 +4,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+	    <link rel="stylesheet" href="font-awesome/css/font-awesome.css"/>
+	    <link rel="stylesheet" href="bootstrap/build.css"/>
+
 		<link rel="stylesheet" href="style.css">
 
 		<script src="jquery.min.js"></script>		
@@ -23,7 +26,7 @@
 
 					<div class="main-content">
 
-						<div class="entries">
+						<form class="entries" role="form">
 
 						  	<div class="form-group entry">
 
@@ -64,22 +67,40 @@
 						    		<div class="entry-header-content">
 						    			What is your name?
 						    		</div>
-						    		
 						    	</div>
 
 						    	<div class="entry-body">
-									<div class="checkbox">
-									  <label>
-									    <input type="checkbox" value="">
-									    Option one is this and that&mdash;be sure to include why it's great
-									  </label>
+
+									<div class="checkbox checkbox-success">
+									    <input type="checkbox" id="checkbox1">
+									    <label for="checkbox1">Check me out</label>
 									</div>
-									<div class="checkbox disabled">
-									  <label>
-									    <input type="checkbox" value="" disabled>
-									    Option two is disabled
-									  </label>
+
+						    	</div>
+						    	
+						  	</div>
+
+						  	<div class="form-group entry">
+
+						    	<div class="entry-header">
+						    		<span class="badge badge-info entry-number">3</span>
+						    		<div class="entry-header-content">
+						    			What is your name?
+						    		</div>
+						    	</div>
+
+						    	<div class="entry-body">
+
+									<div class="checkbox checkbox-success checkbox-inline">
+									    <input type="checkbox" id="inlineCheckbox1" value="option1">
+										<label for="inlineCheckbox1"> Inline One </label>
 									</div>
+
+									<div class="checkbox checkbox-success checkbox-inline">
+									    <input type="checkbox" id="inlineCheckbox2" value="option2">
+										<label for="inlineCheckbox2"> Inline Two </label>
+									</div>
+
 						    	</div>
 						    	
 						  	</div>
@@ -91,31 +112,48 @@
 						    		<div class="entry-header-content">
 						    			What is your name?
 						    		</div>
-						    		
 						    	</div>
 
 						    	<div class="entry-body">
-									<div class="radio">
-									  <label>
-									    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-									    Option one is this and that&mdash;be sure to include why it's great
-									  </label>
+
+									<div class="radio radio-success">
+									    <input type="radio" name="radio2" id="radio3" value="option1">
+									    <label for="radio3">One</label>
 									</div>
-									<div class="radio">
-									  <label>
-									    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-									    Option two can be something else and selecting it will deselect option one
-									  </label>
+
+									<div class="radio radio-success">
+									    <input type="radio" name="radio2" id="radio4" value="option2" checked>
+									    <label for="radio4">Two</label>
 									</div>
-									<div class="radio disabled">
-									  <label>
-									    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
-									    Option three is disabled
-									  </label>
-									</div>
+
 						    	</div>
 						    	
 						  	</div>
+
+						  	<div class="form-group entry">
+
+						    	<div class="entry-header">
+						    		<span class="badge badge-info entry-number">4</span>
+						    		<div class="entry-header-content">
+						    			What is your name?
+						    		</div>
+						    	</div>
+
+						    	<div class="entry-body">
+
+									<div class="radio radio-inline radio-success">
+									    <input type="radio" name="radio2" id="radio3" value="option1">
+									    <label for="radio3">One</label>
+									</div>
+
+									<div class="radio radio-inline radio-success">
+									    <input type="radio" name="radio2" id="radio4" value="option2" checked>
+									    <label for="radio4">Two</label>
+									</div>
+
+						    	</div>
+						    	
+						  	</div>						  	
 
 						  	<div class="form-group entry">
 
@@ -161,7 +199,7 @@
 						    	
 						  	</div>
 
-						</div>
+						</form>
 
 					  	<button type="submit" class="btn btn-default">Submit</button>
 
