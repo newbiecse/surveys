@@ -1,0 +1,9 @@
+Question = function () {
+	
+	
+	
+	return {
+		init();
+	}
+
+}();

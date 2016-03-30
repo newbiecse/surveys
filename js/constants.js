@@ -1,0 +1,8 @@
+var questionType = {
+	TEXTBOX: 0,
+	TEXTAREA: 1,
+	CHECKBOX: 2,
+	RADIO: 3,
+	SELECT: 4,
+	MULTIPLE_SELECT: 5
+}
