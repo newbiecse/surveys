@@ -79,8 +79,76 @@ Quiz = function () {
 
 	}
 
+	var findQuestion = function (questionId) {
+
+		for(var i = 0; i < questions.length; i++) {
+			if (questions[i].id == questionId) {
+				return questions[i];
+			}
+		}
+
+		return null;
+	}
+
+	var answerHandle = function () {
+
+		var $entries = $('#entries');
+
+		$entries.on('change', '.entry input, textarea, select', function() {
+
+			var $this = $(this);
+			var $entry = $this.closest('.entry');
+			var questionId = $entry.data('questionid');
+
+			var question = findQuestion(questionId);
+
+			if (question.type == questionType.CHECKBOX) {
+
+				var selected = [];
+
+				var values = $this.closest('.entry').find('input:checked').each(function(){
+
+					selected.push($(this).val());
+				});
+
+				question.answer = selected.toString();
+
+			} else {
+
+				question.answer = $this.val()
+			}
+
+			console.log(questions);
+		});
+
+		// $entries.on('change', '.entry input[type="checkbox"]', function() {
+
+		// 	var $this = $(this);
+
+		// 	var selected = [];
+
+		// 	var values = $this.closest('.entry').find('input:checked').each(function(){
+
+		// 		selected.push($(this).val());
+		// 	});
+
+		// 	console.log(selected.toString());
+		// });
+
+		// $entries.on('change', '.entry input[type="radio"], select', function() {
+
+		// 	var $this = $(this);
+		// 	console.log($this.val());
+		// });		
+
+	}
+
 	return {
-		init: init,
+		init: function () {
+			
+			init();
+			answerHandle();
+		},
 		getQuestions: function () {
 			return questions;
 		},

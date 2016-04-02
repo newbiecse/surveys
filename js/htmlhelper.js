@@ -3,7 +3,7 @@ HtmlHelper = function () {
 	var entry = function (question) {
 
 		var html =
-		'<div class="form-group entry">' +
+		'<div class="form-group entry" data-questionId="' + question.id + '">' +
 			entryHeader(question) + 
 			entryBody(question) +
 		'</div>';
@@ -58,14 +58,14 @@ HtmlHelper = function () {
 
 	var textboxFor = function (question) {
 
-		var html = '<input data-id="' + question.id + '" type="text" class="form-control">';
+		var html = '<input type="text" class="form-control">';
 		
 		return html;
 	}
 
 	var textareaFor = function (question) {
 
-		var html = '<textarea data-id="' + question.id + '" class="form-control"></textarea>';
+		var html = '<textarea class="form-control"></textarea>';
 
 		return html;
 	}
@@ -80,7 +80,7 @@ HtmlHelper = function () {
 
 			html +=
 			'<div class="checkbox checkbox-success">' +
-			    '<input type="checkbox" id="cbx-' + tempId + '">' +
+			    '<input type="checkbox" name="' + tempId + '" value="' + v.id + '" id="cbx-' + tempId + '">' +
 			    '<label for="cbx-' + tempId + '">' + v.name +'</label>' +
 			'</div>';
 		})
@@ -98,7 +98,7 @@ HtmlHelper = function () {
 
 			html +=
 			'<div class="radio radio-success">' +
-			    '<input name="' + question.id + '" type="radio" id="cbx-' + tempId + '">' +
+			    '<input  type="radio" name="' + question.id + '" id="cbx-' + tempId + '" value="' + v.id + '">' +
 			    '<label for="cbx-' + tempId + '">' + v.name + '</label>' +
 			'</div>';
 		})
