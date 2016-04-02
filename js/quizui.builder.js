@@ -16,8 +16,7 @@ QuizUIBuilder = function (argument) {
 
 				switch (q.type) {
 
-					case questionType.TEXTBOX:
-					case questionType.RADIO:
+					case questionType.TEXTBOX:					
 						$dom.find('input').val(q.answer);
 						break;
 
@@ -29,6 +28,11 @@ QuizUIBuilder = function (argument) {
 						$dom.find('select').val(q.answer);
 						break;
 
+					case questionType.RADIO:
+						var checked = q.answer.split(',');
+						$dom.find('input').val(checked);
+						break;
+						
 					case questionType.CHECKBOX:
 
 						var checked = q.answer.split(',');

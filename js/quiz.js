@@ -34,9 +34,9 @@ Quiz = function () {
 						id: 32,
 						name: 'checkbox 2',
 						checked: false
-					},					
+					}
 				],
-				answer: "32"
+				answer: "31,32"
 			},
 			{
 				id: 4,
@@ -54,8 +54,9 @@ Quiz = function () {
 						id: 42,
 						name: 'radio 2',
 						checked: false
-					},					
-				]
+					}				
+				],
+				answer: "41"
 			},
 			{
 				id: 5,
@@ -70,11 +71,17 @@ Quiz = function () {
 						checked: true
 					},
 					{
-						id: 42,
+						id: 52,
 						name: 'option 2',
 						checked: false
-					},					
-				]
+					},
+					{
+						id: 53,
+						name: 'option 3',
+						checked: false
+					}
+				],
+				answer: "52"
 			}		
 		];
 
