@@ -63,7 +63,7 @@ HtmlHelper = function () {
 		return html;
 	}
 
-	var textareaFor = function (question) {
+	var textareaFor = function (question) {		
 
 		var html = '<textarea class="form-control"></textarea>';
 

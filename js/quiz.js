@@ -35,7 +35,8 @@ Quiz = function () {
 						name: 'checkbox 2',
 						checked: false
 					},					
-				]
+				],
+				answer: "32"
 			},
 			{
 				id: 4,
@@ -74,7 +75,7 @@ Quiz = function () {
 						checked: false
 					},					
 				]
-			},			
+			}		
 		];
 
 	}
